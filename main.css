@@ -1,0 +1,21 @@
+body {
+    background-color: wheat;
+    margin: 0;
+}
+
+menu {
+    display: block;
+    background-color: chocolate;
+    color: wheat;
+    margin-top: 0px;
+    padding: 10px;
+}
+
+menu titulo {
+    font-size: clamp(16px, 4vw, 32px);
+    font-weight: bold;
+}
+
+menu button {
+    margin-left: 10vw;
+}
