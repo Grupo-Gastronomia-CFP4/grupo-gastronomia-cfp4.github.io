@@ -5,17 +5,24 @@ body {
 
 menu {
     display: block;
-    background-color: chocolate;
+    background-color: rgb(231, 140, 76);
     color: wheat;
     margin-top: 0px;
     padding: 10px;
 }
 
 menu titulo {
-    font-size: clamp(16px, 4vw, 32px);
-    font-weight: bold;
+    font-size: clamp(16px, 6vw, 64px);
+    font-weight: bolder;
 }
 
-menu button {
-    margin-left: 10vw;
+menu a {
+    font-size: clamp(8px, 3.5vw, 24px);
+    color: wheat;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+menu a.primer.boton {
+    margin-left: 6vw;
 }
