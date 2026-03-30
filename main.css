@@ -1,28 +1,34 @@
 body {
-    background-color: wheat;
     margin: 0;
 }
 
 menu {
     display: block;
-    background-color: rgb(231, 140, 76);
-    color: wheat;
+    background-color: rgba(40, 65, 148, 0.884);
+    color: white;
     margin-top: 0px;
     padding: 10px;
 }
 
 menu titulo {
-    font-size: clamp(16px, 6vw, 64px);
+    font-size: clamp(16px, 7.5vw, 75px);
     font-weight: bolder;
+    margin-left: 15px;
 }
 
 menu a {
     font-size: clamp(8px, 3.5vw, 24px);
-    color: wheat;
+    color: white;
     font-weight: bold;
     text-decoration: none;
 }
 
 menu a.primer.boton {
     margin-left: 6vw;
+}
+
+img.logo {
+    height: clamp(35px, 6vw, 100px);
+    width: clamp(35px, 7vw, 100px);
+    margin-left: 145px;
 }
