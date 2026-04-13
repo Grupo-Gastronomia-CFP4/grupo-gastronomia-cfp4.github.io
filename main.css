@@ -4,8 +4,8 @@ body {
 
 menu {
     display: block;
-    background-color: rgba(40, 65, 148, 0.884);
-    color: white;
+    background-color: #5B85B9;
+    color: rgba(255, 255, 255, 0.733);
     margin-top: 0px;
     padding: 10px;
 }
@@ -21,6 +21,7 @@ menu a {
     color: white;
     font-weight: bold;
     text-decoration: none;
+    margin-left: 9vw;
 }
 
 menu a.primer.boton {
