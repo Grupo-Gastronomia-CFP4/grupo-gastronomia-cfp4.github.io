@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;                   
+}
+menu {
+    display: flex;
+    background-color: #5B85B9;
+    color: rgba(255, 255, 255, 0.733);
+    margin-top: 0px;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 5%;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;                  
+}
+.boton {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #8696c2;      
+}
+menu titulo {
+    font-size: clamp(16px, 7.5vw, 75px);
+    font-weight: bolder;
+    margin-left: 15px;
+}
+
+menu a {
+    font-size: clamp(8px, 3.5vw, 24px);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 4vw;
+}
+
+menu a.primer.boton {
+    margin-left: 6vw;
+}
+
+img.logo {
+    height: clamp(35px, 6vw, 100px);
+    width: clamp(35px, 7vw, 100px);
+    margin-left: 145px;
+}
+.slider {
+
+    width: 100%;
+    height: 50vh; 
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: cambioImagen 10s infinite;
+  }
+  
+  @keyframes cambioImagen {
+
+    0%, 33.33% {
+      background-image: url('Multimedia/churrosconazucar.jpeg');
+    }
+
+    33.34%, 66.66% {
+      background-image: url('Multimedia/brownie.jpeg');
+    }
+
+    66.67%, 100% {
+      background-image: url('Multimedia/churroenmano.jpeg');
+    }
+  }
+  
