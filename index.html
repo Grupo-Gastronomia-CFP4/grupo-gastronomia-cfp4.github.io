@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <script src="funciones.js" defer></script>
     <title>Pagina Principal</title>
 </head>
 <body>
     <menu>
-        <img src="Multimedia/CFP4-Logo.png" class="logo">
+        <a href="index.html">
+            <img src="Multimedia/CFP4-Logo.png" class="logo">
+        </a>
         <titulo>Gastronomía</titulo>
         <br>
-        <!--Aca dsps habria q poner la direccion de otras paginas, como recetas y cosas asi, nc-->
-        <a href="" class="primer boton">Home</a>
-        <a href="">Test</a>
-        <a href="">Inscribirse</a>
+
+        <!--Aca dsps habria q poner otras paginas, como recetas y cosas asi, nc-->
+        <a href="index.html" class="primer boton">Home</a>
+        <a href="recetas.html">Recetas</a>
+        <a href="inscribirse.html">Inscribirse</a>
     </menu>
-    <img src="Multimedia/churrosconazucar.jpeg" alt="">
+    <img src="Multimedia/churrosconazucar.jpeg" alt="" id="slider-imagenes">
+
+    <!--Esto esta para cambiar las imagenes manualmente, dsps lo saco-->
+    <br>
+    <button onclick="cambiarImagen()">AEIOU</button>
 
     <h1>Gastronomía</h1>
     <h2>informacion principal</h2>
