@@ -20,7 +20,7 @@ menu titulo {
     margin-left: 15px;
 }
 
-menu a {
+menu#arriba a {
     font-size: clamp(8px, 3.5vw, 24px);
     color: white;
     font-weight: bold;
@@ -31,6 +31,23 @@ menu a {
 menu a.primer.boton {
     margin-left: 6vw;
 }
+
+menu#abajo {
+    margin-bottom: 0;
+    color: black;
+    font-size: 1.9vw;
+}
+
+menu#abajo a {
+    color: black;
+    text-decoration: none;
+}
+
+menu#abajo img {
+    height: 2vw;
+    width: auto;
+}
+
 
 img.logo {
     height: clamp(35px, 6vw, 100px);
