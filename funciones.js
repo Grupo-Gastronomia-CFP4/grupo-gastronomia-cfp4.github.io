@@ -1,7 +1,7 @@
 const imagenes = [
-    "nuevo multimedia/img2.jpg",
-    "nuevo multimedia/img3.jpg",
-    "nuevo multimedia/img9.jpg"
+    "Multimedia/img2.jpg",
+    "Multimedia/img3.jpg",
+    "Multimedia/img9.jpg"
 ]
 
 let i = 0

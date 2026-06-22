@@ -1,13 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #fcf5c7;
+    background-color: white;
 }
 
 menu {
     display: block;
     background-color: #5B85B9;
-    color: rgba(255, 255, 255, 0.733);
+    color: white;
     margin-top: 0px;
     padding: 10px;
     position: sticky;
@@ -33,13 +33,14 @@ menu a.primer.boton {
 }
 
 menu#abajo {
+    background-color: #042770;
     margin-bottom: 0;
     color: black;
     font-size: 1.9vw;
 }
 
 menu#abajo a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -84,4 +85,10 @@ informacion p {
 
 faq {
     font-size: 125%;
+}
+
+img#piedesalsa {
+    margin-left: 72.45vw;
+    margin-bottom: -0.5vw;
+    height: 15vw;
 }
