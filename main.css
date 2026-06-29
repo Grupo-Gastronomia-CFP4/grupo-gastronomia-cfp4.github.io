@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: white;
+    position: relative;
 }
 
 menu {
@@ -87,8 +88,29 @@ faq {
     font-size: 125%;
 }
 
-img#piedesalsa {
+img#pidesalsa {
     margin-left: 72.45vw;
     margin-bottom: -0.5vw;
     height: 15vw;
+}
+
+img.salsa {
+    position: absolute;
+    z-index: -1;
+}
+.salsa#s0 {
+    top: 35%;
+    left: 85%;
+}
+.salsa#s1 {
+    top: 48%;
+    left: 2%;
+}
+.salsa#s2 {
+    top: 10%;
+    left: 2%;
+}
+.salsa#s3 {
+    top: 69%;
+    left: 69%;
 }
