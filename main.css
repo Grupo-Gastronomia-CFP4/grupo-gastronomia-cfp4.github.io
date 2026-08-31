@@ -1,116 +1,383 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: white;
-    position: relative;
+    background-color: #F5F8FC;
+    color: #172B4D;
+    font-family: 'Work Sans', sans-serif;
 }
 
-menu {
-    display: block;
-    background-color: #5B85B9;
+h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    color: #172B4D;
+    margin: 0;
+}
+
+p {
+    color: #52657A;
+    line-height: 1.65;
+}
+
+a {
+    color: inherit;
+}
+
+
+
+menu#arriba {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+    background-color: #1F4E85;
     color: white;
-    margin-top: 0px;
-    padding: 10px;
-    position: sticky;
-    top: 0;
+    padding: 14px 5vw;
+    margin: 0;
 }
 
-menu titulo {
-    font-size: clamp(16px, 7.5vw, 75px);
-    font-weight: bolder;
-    margin-left: 15px;
+menu#arriba a:first-child {
+    display: flex;
+    align-items: center;
+}
+
+img.logo {
+    height: clamp(35px, 6vw, 60px);
+    width: auto;
+}
+
+menu#arriba titulo {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 700;
+    margin-right: auto;
 }
 
 menu#arriba a {
-    font-size: clamp(8px, 3.5vw, 24px);
+    font-size: clamp(14px, 1.4vw, 18px);
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
-    margin-left: 9vw;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color .2s, opacity .2s;
 }
 
-menu a.primer.boton {
-    margin-left: 6vw;
+menu#arriba a:hover {
+    opacity: .85;
 }
+
+menu#arriba a.activo {
+    border-bottom-color: white;
+}
+
+
+
+.hero {
+    max-width: 760px;
+    margin: 64px auto 40px;
+    padding: 0 5vw;
+}
+
+.hero h1 {
+    font-size: clamp(2.1rem, 4.4vw, 3.2rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 22px;
+}
+
+.hero .lead {
+    font-size: 1.15rem;
+    max-width: 60ch;
+}
+
+.hero-strip {
+    max-width: 1100px;
+    margin: 0 auto 64px;
+    padding: 0 5vw;
+}
+
+#slider-imagenes {
+    width: 100%;
+    height: 32vw;
+    max-height: 520px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    transition: opacity .5s ease;
+}
+
+.hero-strip figcaption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: #52657A;
+    border-top: 1px solid #D7E2EF;
+    padding-top: 10px;
+}
+
+
+.programa {
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 5vw;
+}
+
+.programa > h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 34px;
+}
+
+.programa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px 28px;
+}
+
+.programa-item {
+    border-top: 3px solid #C9D8E8;
+    padding-top: 18px;
+}
+
+.programa-item h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.programa-item p {
+    font-size: 0.98rem;
+}
+
+.programa-item.destacada {
+    grid-column: span 2;
+    background: #1F4E85;
+    border-top-color: #75A9DD;
+    padding: 28px;
+    border-radius: 6px;
+}
+
+.programa-item.destacada h3,
+.programa-item.destacada p {
+    color: #FFFFFF;
+}
+
+.programa-item.destacada p {
+    color: #DCE9F7;
+}
+
+
+.faq-container {
+    max-width: 700px;
+    margin: 64px auto 90px;
+    padding: 0 5vw;
+}
+
+.faq-container > h1 {
+    font-size: 1.9rem;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #D7E2EF;
+}
+
+.faq-item summary {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    list-style: none;
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    user-select: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #2F6DA8;
+    transition: transform .25s;
+    flex-shrink: 0;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+
+.faq-item p {
+    padding: 0 0 22px;
+    margin: 0;
+    max-width: 62ch;
+    animation: fadeIn .25s ease;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.recetas-hero {
+    max-width: 760px;
+    margin: 64px auto 8px;
+    padding: 0 5vw;
+}
+
+.recetas-hero h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 14px;
+}
+
+.contenedor-recetas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 28px;
+    max-width: 1100px;
+    margin: 40px auto 90px;
+    padding: 0 5vw;
+}
+
+.receta-card {
+    flex: 1 1 360px;
+    max-width: 480px;
+    background: #FFFFFF;
+    border: 1px solid #D7E2EF;
+    border-top: 4px solid #2F6DA8;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(31, 78, 133, 0.08);
+}
+
+.receta-card h2 {
+    font-size: 1.4rem;
+    margin: 0 0 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #D7E2EF;
+}
+
+.receta-card h3 {
+    font-size: 0.85rem;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    color: #2F6DA8;
+    margin: 22px 0 10px;
+}
+
+.receta-card ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.receta-card li {
+    margin-bottom: 10px;
+    color: #52657A;
+    line-height: 1.55;
+}
+
+.receta-card li::marker {
+    color: #2F6DA8;
+    font-weight: 600;
+}
+
+.receta-card .preparacion p {
+    margin: 0 0 12px;
+    font-size: 0.97rem;
+}
+
 
 menu#abajo {
-    background-color: #042770;
-    margin-bottom: 0;
-    color: black;
-    font-size: 1.9vw;
+    background-color: #163B68;
+    color: white;
+    margin: 40px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+    padding: 20px 10px;
+}
+
+.item-abajo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 menu#abajo a {
     color: white;
     text-decoration: none;
+    font-size: 0.95rem;
+}
+
+menu#abajo a:hover {
+    opacity: 0.8;
 }
 
 menu#abajo img {
     height: 2vw;
+    min-height: 18px;
     width: auto;
 }
 
 
-img.logo {
-    height: clamp(35px, 6vw, 100px);
-    width: clamp(35px, 7vw, 100px);
-    margin-left: 5vw;
+@media (max-width: 768px) {
+
+    .masthead {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .masthead nav {
+        justify-content: center;
+        gap: 5vw;
+    }
+
+    .programa-item.destacada {
+        grid-column: span 1;
+    }
+
+    #slider-imagenes {
+        height: 55vw;
+    }
+
+    .receta-card {
+        max-width: 100%;
+    }
 }
 
-#slider-imagenes {
-    width: 75vw;
-    height: 34vw;
-    margin-left: 12.5vw;
-}
 
-informacion h1, informacion h2, informacion p {
-    font-weight: bold;
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 
-informacion h1 {
-    margin-left: 5vw;
-}
+@media (prefers-reduced-motion: reduce) {
 
-informacion h2 {
-    margin-top: 2.5vw;
-    margin-bottom: 2vw;
-    margin-left: 2vw;
-}
+    #slider-imagenes {
+        transition: none;
+    }
 
-informacion p {
-    margin-left: 1vw;
-    margin-right: 1vw;
-}
-
-faq {
-    font-size: 125%;
-}
-
-img#pidesalsa {
-    margin-left: 72.45vw;
-    margin-bottom: -0.5vw;
-    height: 15vw;
-}
-
-img.salsa {
-    position: absolute;
-    z-index: -1;
-}
-.salsa#s0 {
-    top: 35%;
-    left: 85%;
-}
-.salsa#s1 {
-    top: 48%;
-    left: 2%;
-}
-.salsa#s2 {
-    top: 10%;
-    left: 2%;
-}
-.salsa#s3 {
-    top: 69%;
-    left: 69%;
+    .faq-item p {
+        animation: none;
+    }
 }

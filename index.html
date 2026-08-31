@@ -1,77 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <script src="funciones.js" defer></script>
-    <title>Pagina Principal</title>
+    <title>Gastronomía — CFP N°4</title>
 </head>
 <body>
     <menu id="arriba">
         <a href="index.html">
-            <img src="Multimedia/CFP4-Logo.png" class="logo">
+            <img src="Multimedia/CFP4-Logo.png" class="logo" alt="Logo CFP N°4">
         </a>
         <titulo>Gastronomía</titulo>
-        <br>
-
-        <!--Aca dsps habria q poner otras paginas, como recetas y cosas asi, nc-->
-        <a href="index.html" class="primer boton">Principal</a>
+        <a href="index.html" class="activo">Principal</a>
         <a href="recetas.html">Recetas</a>
         <a href="faq.html">Preguntas Frecuentes</a>
     </menu>
-    <img src="Multimedia/img2.jpg" alt="" id="slider-imagenes">
 
-    <br><br><br>
-    
-    <img src="Multimedia/skibidi toilet.png" class="salsa" id="s0">
-    <img src="Multimedia/nelsonfeo.png" class="salsa" id="s1">
-    <img src="Multimedia/salsa69.png" class="salsa" id="s2">
-    <img src="Multimedia/salsa67.png" class="salsa" id="s3">
-    
-    <br><br><br>
+    <section class="hero">
+        <h1>Gastronomía</h1>
+        <p class="lead">La orientación en Gastronomía del CFP N°4 combina práctica, creatividad y responsabilidad. Los estudiantes pasan de las técnicas básicas a preparaciones complejas.</p>
+    </section>
 
-    <informacion>
-        <h1>Experiencia y aprendizaje en Gastronomía</h1>
-        <h2>Introducción</h2>
-        <p>La orientación en Gastronomía combina práctica, creatividad y responsabilidad. A lo largo de los años, los estudiantes pasan de aprender técnicas básicas a realizar preparaciones más complejas, desarrollando habilidades que no solo sirven dentro de la cocina, sino también en la vida cotidiana y en futuros espacios laborales.</p>
+    <figure class="hero-strip">
+        <img src="Multimedia/img2.jpg" alt="Estudiantes de la orientación en Gastronomía trabajando en la cocina" id="slider-imagenes">
+        <figcaption>Estudiantes de la orientación en pleno trabajo de cocina.</figcaption>
+    </figure>
 
-        <h2>Evolución del aprendizaje</h2>
-        <p>Durante los primeros años, los alumnos comienzan con contenidos básicos como panadería y preparación de masas. Con el tiempo, las actividades se vuelven más completas y exigentes, incorporando técnicas de cocción, organización de buffet y presentación de platos.</p>
-        <p>Aunque las clases requieren cada vez más dedicación, la práctica constante ayuda a que los estudiantes ganen confianza y mejoren sus habilidades de manera progresiva.</p>
+    <section class="programa">
+        <h2>Cómo se vive la orientación</h2>
+        <div class="programa-grid">
 
-        <h2>Desafíos dentro de la cocina</h2>
-        <p>Uno de los mayores desafíos es aprender sobre seguridad e higiene alimentaria, especialmente en el manejo de carnes y diferentes tipos de cocción. Los estudiantes entienden que trabajar con alimentos implica una gran responsabilidad, ya que un error puede afectar tanto la preparación como la salud de las personas.</p>
-        <p>Además, en gastronomía cada paso es importante. Cambiar el orden de los ingredientes o equivocarse en una técnica puede modificar completamente el resultado final de una receta.</p>
+            <article class="programa-item destacada">
+                <h3>Evolución del aprendizaje</h3>
+                <p>Se empieza desde cero con panadería básica y se avanza hacia la organización de buffets complejos y técnicas de cocción más avanzadas, a medida que pasan los años.</p>
+            </article>
 
-        <h2>Trabajo en equipo y convivencia</h2>
-        <p>La cocina es un espacio donde el trabajo en equipo resulta fundamental. Las tareas requieren organización, comunicación y colaboración entre compañeros para lograr buenos resultados.</p>
-        <p>Si bien a veces pueden surgir diferencias o conflictos, esta experiencia también ayuda a aprender a convivir, respetar distintas formas de pensar y desenvolverse en un ambiente similar al laboral.</p>
+            <article class="programa-item">
+                <h3>Desafíos en la cocina</h3>
+                <p>Se aprende seguridad e higiene alimentaria. En una cocina profesional cada paso cuenta y la precisión es lo que garantiza el resultado.</p>
+            </article>
 
-        <h2>Creatividad y expresión personal</h2>
-        <p>La gastronomía también permite desarrollar la creatividad. Los estudiantes tienen la posibilidad de personalizar presentaciones, diseños y detalles de sus preparaciones, especialmente en panadería y pastelería.</p>
-        <p>Con el tiempo, cocinar deja de verse solo como una obligación y se transforma en una forma de expresar dedicación, estilo personal e incluso cariño hacia otras personas.</p>
+            <article class="programa-item">
+                <h3>Trabajo en equipo</h3>
+                <p>La cocina es un espacio compartido. Ahí se desarrollan comunicación, liderazgo y convivencia, en un entorno parecido al laboral.</p>
+            </article>
 
-        <h2>Relación con los docentes</h2>
-        <p>Los profesores cumplen un papel muy importante en el aprendizaje. Acompañan constantemente a los estudiantes, guiándolos y ayudándolos a mejorar sus técnicas sin hacer el trabajo por ellos.</p>
-        <p>Este acompañamiento fomenta la responsabilidad, la autonomía y la confianza en cada alumno.</p>
+            <article class="programa-item">
+                <h3>Creatividad y expresión</h3>
+                <p>Cada estudiante personaliza sus presentaciones, diseños y sabores. Cocinar se vuelve una forma de expresar dedicación y estilo propio.</p>
+            </article>
 
-        <h2>Impacto en el futuro</h2>
-        <p>Para muchos estudiantes, la orientación gastronómica cambia su forma de ver el futuro. Algunos descubren intereses que antes no imaginaban, como trabajar en una cocina profesional o tener un emprendimiento propio.</p>
-        <p>Además, reconocen que la gastronomía ofrece aprendizajes que van más allá de cocinar, ya que también se prepara para enfrentar responsabilidades y desafíos del mundo laboral.</p>
-    </informacion>
+            <article class="programa-item">
+                <h3>Relación con docentes</h3>
+                <p>Profesores con experiencia guían de cerca sin hacer el trabajo por el estudiante, fomentando autonomía y confianza.</p>
+            </article>
 
-    <br><br>
-    <img src="Multimedia/pidesalsa.png" alt="" id="pidesalsa">
+            <article class="programa-item">
+                <h3>Impacto en el futuro</h3>
+                <p>Abre puertas al mundo laboral, a la alta cocina o a un emprendimiento propio: aprendizajes que sirven para toda la vida.</p>
+            </article>
+
+        </div>
+    </section>
+
     <menu id="abajo">
-        <img src="Multimedia/logo de gugul maps.png" alt="">
-        <a href="https://www.google.com/maps/place/Centro+de+Formaci%C3%B3n+Profesional+N+4/@-34.6688553,-58.5001706,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcc91901dc9925:0x16b20ada69ad6837!8m2!3d-34.6688553!4d-58.5001706!16s%2Fg%2F11c20sdx_k?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D">Carhue 2970, C1440 Cdad. Autónoma de Buenos Aires</a>
-        <br><br>
-        <img src="Multimedia/facebuk.png" alt="">
-        <a href="https://www.facebook.com/cfpcuatro">Facebook</a>
-        <br><br>
-        <img src="Multimedia/logoint2.png" alt="">
-        <a href="https://www.instagram.com/cfp_cuatro/">Instagram</a>
+        <div class="item-abajo">
+            <img src="Multimedia/Google-Maps-Logo.png" alt="">
+            <a href="https://www.google.com/maps/place/Centro+de+Formaci%C3%B3n+Profesional+N+4/@-34.6688553,-58.5001706,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcc91901dc9925:0x16b20ada69ad6837!8m2!3d-34.6688553!4d-58.5001706!16s%2Fg%2F11c20sdx_k?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D">Google Maps</a>
+        </div>
+        <div class="item-abajo">
+            <img src="Multimedia/Facebook-Logo.png" alt="">
+            <a href="https://www.facebook.com/cfpcuatro">Facebook</a>
+        </div>
+        <div class="item-abajo">
+            <img src="Multimedia/Instagram-Logo.jfif" alt="">
+            <a href="https://www.instagram.com/cfp_cuatro/">Instagram</a>
+        </div>
     </menu>
 </body>
 </html>
