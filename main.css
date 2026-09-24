@@ -5,14 +5,14 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #F5F8FC;
+    background-color: #F7EBE1;
     color: #172B4D;
     font-family: 'Work Sans', sans-serif;
 }
 
 h1, h2, h3 {
     font-family: 'Fraunces', serif;
-    color: #172B4D;
+    color: #422815;
     margin: 0;
 }
 
@@ -32,8 +32,8 @@ menu#arriba {
     align-items: center;
     flex-wrap: wrap;
     gap: 3vw;
-    background-color: #1F4E85;
-    color: white;
+    background-color: #F7EBE1;
+    color: black;
     padding: 14px 5vw;
     margin: 0;
 }
@@ -48,32 +48,115 @@ img.logo {
     width: auto;
 }
 
-menu#arriba titulo {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(20px, 3vw, 32px);
-    font-weight: 700;
-    margin-right: auto;
-}
 
 menu#arriba a {
     font-size: clamp(14px, 1.4vw, 18px);
-    color: white;
+    color: black;
     font-weight: 600;
     text-decoration: none;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 2px;
-    transition: border-color .2s, opacity .2s;
+    border: 2px solid transparent;
+    background: solid transparent;
+    border-radius: 25px;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: color .5s, opacity .2s, background-color .5s;
 }
 
 menu#arriba a:hover {
-    opacity: .85;
+    background-color: #693E23;
+    color: white;
+    font-size: clamp(14px, 1.7vw, 19px);
 }
 
 menu#arriba a.activo {
-    border-bottom-color: white;
+    background-color: #693E23;
+    color: white;
+}
+
+menu#arriba a.LogoCFP4 {
+    background-color: transparent;
 }
 
 
+.linea-tiempo {
+    max-width: 900px;
+    margin: 0 auto 90px;
+    padding: 0 5vw;
+}
+
+.linea-tiempo > h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.linea-tiempo > .lead {
+    max-width: 60ch;
+    margin-bottom: 44px;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 32px;
+    border-left: 2px solid #693E23;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #693E23;
+    border: 3px solid #F7EBE1;
+}
+
+.timeline-item.destacado::before {
+    background: #693E23;
+    width: 18px;
+    height: 18px;
+    left: -42px;
+    top: 2px;
+}
+
+.timeline-item .etapa {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #693E23;
+    margin-bottom: 6px;
+}
+
+.timeline-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    max-width: 58ch;
+}
+
+.salida-laboral {
+    max-width: 1100px;
+    margin: 0 auto 90px;
+    padding: 0 5vw;
+}
+
+.salida-laboral > h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 34px;
+}
 
 .hero {
     max-width: 760px;
@@ -113,8 +196,8 @@ menu#arriba a.activo {
 .hero-strip figcaption {
     margin-top: 12px;
     font-size: 0.9rem;
-    color: #52657A;
-    border-top: 1px solid #D7E2EF;
+    color: #693E23;
+    border-top: 1px solid #693E23;
     padding-top: 10px;
 }
 
@@ -138,7 +221,7 @@ menu#arriba a.activo {
 }
 
 .programa-item {
-    border-top: 3px solid #C9D8E8;
+    border-top: 3px solid #693E23;
     padding-top: 18px;
 }
 
@@ -152,22 +235,7 @@ menu#arriba a.activo {
     font-size: 0.98rem;
 }
 
-.programa-item.destacada {
-    grid-column: span 2;
-    background: #1F4E85;
-    border-top-color: #75A9DD;
-    padding: 28px;
-    border-radius: 6px;
-}
 
-.programa-item.destacada h3,
-.programa-item.destacada p {
-    color: #FFFFFF;
-}
-
-.programa-item.destacada p {
-    color: #DCE9F7;
-}
 
 
 .faq-container {
@@ -208,7 +276,7 @@ menu#arriba a.activo {
     font-family: 'Work Sans', sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
-    color: #2F6DA8;
+    color: #693E23;
     transition: transform .25s;
     flex-shrink: 0;
 }
@@ -264,9 +332,9 @@ menu#arriba a.activo {
 .receta-card {
     flex: 1 1 360px;
     max-width: 480px;
-    background: #FFFFFF;
+    background: #F7EBE1;
     border: 1px solid #D7E2EF;
-    border-top: 4px solid #2F6DA8;
+    border-top: 4px solid #693E23;
     border-radius: 6px;
     padding: 30px;
     box-shadow: 0 4px 15px rgba(31, 78, 133, 0.08);
@@ -283,7 +351,7 @@ menu#arriba a.activo {
     font-size: 0.85rem;
     text-transform: none;
     letter-spacing: 0.02em;
-    color: #2F6DA8;
+    color: #693E23;
     margin: 22px 0 10px;
 }
 
@@ -294,12 +362,12 @@ menu#arriba a.activo {
 
 .receta-card li {
     margin-bottom: 10px;
-    color: #52657A;
+    color: #693E23;
     line-height: 1.55;
 }
 
 .receta-card li::marker {
-    color: #2F6DA8;
+    color: #693E23;
     font-weight: 600;
 }
 
@@ -310,7 +378,7 @@ menu#arriba a.activo {
 
 
 menu#abajo {
-    background-color: #163B68;
+    background-color: #F7EBE1;
     color: white;
     margin: 40px 0 0;
     display: flex;
@@ -328,7 +396,7 @@ menu#abajo {
 }
 
 menu#abajo a {
-    color: white;
+    color: #422815;
     text-decoration: none;
     font-size: 0.95rem;
 }
