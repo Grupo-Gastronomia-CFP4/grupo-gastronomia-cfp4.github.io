@@ -7,13 +7,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <script>document.documentElement.classList.add('js');</script>
     <title>Preguntas Frecuentes — Gastronomía CFP N°4</title>
+    <script src="funciones.js" defer></script>
 </head>
 <body>
     <menu id="arriba">
         <a href="index.html" class="LogoCFP4">
             <img src="Multimedia/CFP4-Logo.png" class="logo" alt="Logo CFP N°4">
         </a>
+        <button type="button" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="arriba">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <a href="index.html">Principal</a>
         <a href="recetas.html">Recetas</a>
         <a href="faq.html" class="activo">Acerca de</a>
@@ -83,15 +90,15 @@
 
     <menu id="abajo">
         <div class="item-abajo">
-            <img src="Multimedia/Ubicacion.png" alt="">
+            <a href="https://www.google.com/maps/place/Centro+de+Formaci%C3%B3n+Profesional+N+4/@-34.6688553,-58.5001706,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcc91901dc9925:0x16b20ada69ad6837!8m2!3d-34.6688553!4d-58.5001706!16s%2Fg%2F11c20sdx_k?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" class="icono-link" aria-label="Google Maps"><img src="Multimedia/Ubicacion.png" alt=""></a>
             <a href="https://www.google.com/maps/place/Centro+de+Formaci%C3%B3n+Profesional+N+4/@-34.6688553,-58.5001706,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcc91901dc9925:0x16b20ada69ad6837!8m2!3d-34.6688553!4d-58.5001706!16s%2Fg%2F11c20sdx_k?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D">Google Maps</a>
         </div>
         <div class="item-abajo">
-            <img src="Multimedia/FB.png" alt="">
+            <a href="https://www.facebook.com/cfpcuatro" class="icono-link" aria-label="Facebook"><img src="Multimedia/FB.png" alt=""></a>
             <a href="https://www.facebook.com/cfpcuatro">Facebook</a>
         </div>
         <div class="item-abajo">
-            <img src="Multimedia/IG.png" alt="">
+            <a href="https://www.instagram.com/cfp_cuatro/" class="icono-link" aria-label="Instagram"><img src="Multimedia/IG.png" alt=""></a>
             <a href="https://www.instagram.com/cfp_cuatro/">Instagram</a>
         </div>
     </menu>

@@ -472,3 +472,375 @@ menu#abajo img {
         animation: none;
     }
 }
+
+.barra-progreso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #693E23;
+    transform-origin: left center;
+    transform: scaleX(0);
+    z-index: 1100;
+    pointer-events: none;
+}
+
+menu#arriba {
+    transition: box-shadow .4s ease;
+}
+
+menu#arriba.con-sombra {
+    box-shadow: 0 4px 18px rgba(66, 40, 21, 0.18);
+}
+
+@keyframes entradaSuave {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1,
+.recetas-hero h1 {
+    animation: entradaSuave .9s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.hero .lead,
+.recetas-hero .lead {
+    animation: entradaSuave .9s cubic-bezier(.2, .7, .2, 1) .18s both;
+}
+
+.js .reveal {
+    opacity: 0;
+    translate: 0 36px;
+    transition:
+        opacity .8s ease var(--delay, 0s),
+        translate .8s cubic-bezier(.2, .7, .2, 1) var(--delay, 0s);
+}
+
+.js .reveal.reveal-left {
+    translate: -36px 0;
+}
+
+.js .reveal.visible {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.js .programa-item.reveal {
+    transition:
+        border-color .5s,
+        transform .2s,
+        opacity .8s ease var(--delay, 0s),
+        translate .8s cubic-bezier(.2, .7, .2, 1) var(--delay, 0s);
+}
+
+.js .hero-strip.reveal {
+    translate: 0 0;
+}
+
+.js .hero-strip.reveal #slider-imagenes {
+    clip-path: inset(0 0 100% 0 round 6px);
+    transition: opacity .5s ease, clip-path 1.3s cubic-bezier(.2, .7, .2, 1) .1s;
+}
+
+.js .hero-strip.reveal.visible #slider-imagenes {
+    clip-path: inset(0 0 0 0 round 6px);
+}
+
+.js .hero-strip.reveal figcaption {
+    opacity: 0;
+    transition: opacity .8s ease .9s;
+}
+
+.js .hero-strip.reveal.visible figcaption {
+    opacity: 1;
+}
+
+.js .timeline-item.reveal::before {
+    scale: 0;
+    transition: scale .6s cubic-bezier(.3, 1.6, .5, 1) calc(var(--delay, 0s) + .25s);
+}
+
+.js .timeline-item.reveal.visible::before {
+    scale: 1;
+}
+
+.faq-item summary {
+    transition: padding-left .3s ease, color .3s ease;
+}
+
+.faq-item summary:hover {
+    padding-left: 8px;
+    color: #693E23;
+}
+
+.receta-card {
+    transition: box-shadow .4s ease, border-color .4s ease;
+}
+
+.receta-card:hover {
+    box-shadow: 0 10px 28px rgba(66, 40, 21, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero h1,
+    .hero .lead,
+    .recetas-hero h1,
+    .recetas-hero .lead {
+        animation: none;
+    }
+
+    .js .reveal,
+    .js .reveal.reveal-left {
+        opacity: 1;
+        translate: none;
+        transition: none;
+    }
+
+    .js .hero-strip.reveal #slider-imagenes {
+        clip-path: none;
+        transition: none;
+    }
+
+    .js .hero-strip.reveal figcaption {
+        opacity: 1;
+        transition: none;
+    }
+
+    .js .timeline-item.reveal::before {
+        scale: 1;
+        transition: none;
+    }
+
+    .barra-progreso {
+        display: none;
+    }
+}
+
+menu#abajo a.icono-link {
+    display: flex;
+    align-items: center;
+}
+
+menu#abajo a.icono-link:hover {
+    opacity: 1;
+}
+
+menu#abajo a.icono-link img {
+    transition: transform .25s ease;
+}
+
+menu#abajo a.icono-link:hover img,
+menu#abajo a.icono-link:focus-visible img {
+    transform: scale(1.25);
+}
+
+.salida-laboral .programa-grid {
+    grid-auto-rows: 1fr;
+}
+
+.salida-laboral .programa-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    menu#abajo a.icono-link img {
+        transition: none;
+    }
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    menu#arriba {
+        justify-content: space-between;
+        padding: 10px 5vw;
+        gap: 0;
+    }
+
+    menu#arriba a.LogoCFP4 {
+        margin-right: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        margin-left: auto;
+        background: transparent;
+        border: 2px solid #693E23;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background-color .3s;
+    }
+
+    .menu-toggle:hover {
+        background-color: #F2E5D8;
+    }
+
+    .menu-toggle:focus-visible {
+        outline: 3px solid #A68468;
+        outline-offset: 2px;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 22px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #693E23;
+        transition: transform .3s ease, opacity .2s ease;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .js menu#arriba a:not(.LogoCFP4) {
+        display: none;
+    }
+
+    .js menu#arriba.abierto a:not(.LogoCFP4) {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 1.05rem;
+        padding: 12px;
+        margin-top: 8px;
+        animation: fadeIn .25s ease;
+    }
+
+    menu#arriba.abierto {
+        box-shadow: 0 8px 22px rgba(66, 40, 21, 0.2);
+        padding-bottom: 14px;
+    }
+
+    .hero,
+    .recetas-hero {
+        margin-top: 100px;
+    }
+
+    .linea-tiempo,
+    .faq-container {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .lead {
+        font-size: 1.05rem;
+    }
+
+    .programa > h2,
+    .salida-laboral > h2,
+    .linea-tiempo > h2,
+    .faq-container > h1 {
+        font-size: 1.6rem;
+    }
+
+    .programa-grid {
+        gap: 20px;
+    }
+
+    .receta-card {
+        padding: 22px 18px;
+    }
+
+    .timeline {
+        padding-left: 24px;
+        gap: 32px;
+    }
+
+    .timeline-item::before {
+        left: -32px;
+    }
+
+    .timeline-item.destacado::before {
+        left: -34px;
+    }
+
+    .faq-item summary {
+        font-size: 1rem;
+    }
+
+    menu#abajo {
+        gap: 18px 24px;
+    }
+
+    menu#abajo img {
+        min-height: 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .menu-toggle span {
+        transition: none;
+    }
+
+    .js menu#arriba.abierto a:not(.LogoCFP4) {
+        animation: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    menu#abajo {
+        flex-wrap: nowrap;
+        gap: 32px;
+        padding: 20px 10px 28px;
+    }
+
+    menu#abajo a:not(.icono-link) {
+        display: none;
+    }
+
+    menu#abajo img {
+        height: 30px;
+        min-height: 30px;
+    }
+}
